@@ -1,6 +1,6 @@
 import { Post } from './post.model';
 
-export const POSTS: Post[] = [
+export let POSTS: Post[] = [
   new Post('James', 'I love giant peaches', 'Agriculture and Fruit', 'Hello World'),
   new Post('James', 'I hate bugs', 'Agriculture and Fruit', 'Things I hate'),
   new Post('James', 'Pesticides FTL', 'Agriculture and Fruit', 'Random thoughts'),

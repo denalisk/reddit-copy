@@ -7,16 +7,20 @@ export class PostService {
 
   constructor() { }
 
-getPosts() {
-  return POSTS;
-}
+  getPosts() {
+    return POSTS;
+  }
 
-getPostById(postID: number) {
-  for(var i = 0; i < POSTS.length; i++) {
-    if (POSTS[i].id === postID) {
-      return POSTS[i];
+  getPostById(postID: number) {
+    for(var i = 0; i < POSTS.length; i++) {
+      if (POSTS[i].id === postID) {
+        return POSTS[i];
+      }
     }
   }
-}
+
+  public savePost(newPost: Post): void {
+    POSTS.push(newPost);
+  }
 
 }
