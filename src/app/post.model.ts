@@ -6,4 +6,8 @@ export class Post {
     this.id = Post.idCounter;
     Post.idCounter++;
   }
+
+  public alterVotes(changeNumber: number) {
+    this.upvotes += changeNumber;
+  }
 }

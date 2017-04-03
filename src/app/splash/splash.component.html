@@ -2,8 +2,19 @@
 
 <div *ngFor="let post of postsArray">
   <div class="panel panel-info">
-    <div class="panel-heading" (click)="goToPostDetails(post)">
-      <h3><strong>{{post.title}}</strong> <em>by {{post.author}}</em></h3>
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-sm-8" (click)="goToPostDetails(post)">
+          <h3><strong>{{post.title}}</strong> <em>by {{post.author}}</em></h3>
+        </div>
+        <div class="col-sm-4">
+          <p>
+            Current votes: {{post.upvotes}}
+          </p>
+          <button type="button" class="btn btn-success" (click)="post.alterVotes(1)">Upvote</button>
+          <button type="button" class="btn btn-danger" (click)="post.alterVotes(-1)">Downvote</button>
+        </div>
+      </div>
     </div>
     <div class="panel-body">
       <p>

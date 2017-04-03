@@ -9,6 +9,7 @@ import { SplashComponent } from './splash/splash.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { NewPostComponent } from './new-post/new-post.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
+import { UpvoteSorterPipe } from './upvote-sorter.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     SplashComponent,
     PostDetailComponent,
     NewPostComponent,
-    EditPostComponent
+    EditPostComponent,
+    UpvoteSorterPipe
   ],
   imports: [
     BrowserModule,
