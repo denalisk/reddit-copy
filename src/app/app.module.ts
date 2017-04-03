@@ -10,6 +10,8 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { NewPostComponent } from './new-post/new-post.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
 import { UpvoteSorterPipe } from './upvote-sorter.pipe';
+import { PostCommentsComponent } from './post-comments/post-comments.component';
+import { NewCommentComponent } from './new-comment/new-comment.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { UpvoteSorterPipe } from './upvote-sorter.pipe';
     PostDetailComponent,
     NewPostComponent,
     EditPostComponent,
-    UpvoteSorterPipe
+    UpvoteSorterPipe,
+    PostCommentsComponent,
+    NewCommentComponent
   ],
   imports: [
     BrowserModule,

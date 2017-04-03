@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { ActivatedRoute, Params} from '@angular/router';
 import { Post } from '../post.model';
 import { EditPostComponent } from '../edit-post/edit-post.component';
+import { PostCommentsComponent } from '../post-comments/post-comments.component';
 
 @Component({
   selector: 'app-post-detail',
