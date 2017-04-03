@@ -6,11 +6,15 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { SplashComponent } from './splash/splash.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
+import { NewPostComponent } from './new-post/new-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SplashComponent
+    SplashComponent,
+    PostDetailComponent,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,
