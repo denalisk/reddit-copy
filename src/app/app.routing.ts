@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SplashComponent } from './splash/splash.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { NewPostComponent } from './new-post/new-post.component';
+import { NewCommentComponent } from './new-comment/new-comment.component';
 
 const appRoutes: Routes = [
   {

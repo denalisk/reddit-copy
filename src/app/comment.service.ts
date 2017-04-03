@@ -25,4 +25,8 @@ export class CommentService {
     }
   }
 
+  saveComment(newComment) {
+    COMMENTS.push(newComment);
+  }
+
 }

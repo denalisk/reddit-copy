@@ -1,3 +1,11 @@
-<p>
-  new-comment works!
-</p>
+<div class="panel panel-success form-group">
+  <div class="panel-heading">
+    <label for="new-author">Author</label>
+    <input class="form-control" type="text" name="new-author" id="new-author" (input)="newAuthor = $event.target.value" [value]="newAuthor">
+  </div>
+  <div class="panel-body">
+    <label for="new-text">Saiyyit Back</label>
+    <input class="form-control" type="text" name="new-text" id="new-text" (input)="newText = $event.target.value" [value]="newText">
+  </div>
+  <button type="button" (click)="clickedSaveButton()">Publish Comment</button>
+</div>

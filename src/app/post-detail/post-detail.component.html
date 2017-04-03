@@ -21,3 +21,7 @@
   <app-edit-post (updateSender)="isBeingEdited = false" [currentPost]="postToDisplay"></app-edit-post>
 </div>
 <app-post-comments [currentPost]="postToDisplay"></app-post-comments>
+
+<div>
+  <app-new-comment [currentPost]="postToDisplay"></app-new-comment>
+</div>
