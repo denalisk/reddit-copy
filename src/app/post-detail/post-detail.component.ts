@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../post.service';
+import { Location } from '@angular/common';
+import { ActivatedRoute, Params} from '@angular/router';
+import { Post } from '../post.model';
 
 @Component({
   selector: 'app-post-detail',
@@ -9,9 +12,19 @@ import { PostService } from '../post.service';
 })
 export class PostDetailComponent implements OnInit {
 
-  constructor() { }
+  postId: number = null;
+  postToDisplay: Post;
+
+  constructor(public postService: PostService,
+          public location: Location,
+          public route: ActivatedRoute) {
+  }
 
   ngOnInit() {
+    this.route.params.forEach((urlParam) => {
+      this.postId = parseInt(urlParam['id']);
+    });
+    this.postToDisplay = this.postService.getPostById(this.postId);
   }
 
 }

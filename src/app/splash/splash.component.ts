@@ -18,7 +18,10 @@ export class SplashComponent implements OnInit {
 
   ngOnInit() {
     this.postsArray = this.postService.getPosts();
+  }
 
+  goToPostDetails(selectedPost: Post){
+    this.router.navigate(['post', selectedPost.id]);
   }
 
 }

@@ -1,3 +1,14 @@
-<p>
-  splash works!
-</p>
+<h2>Marketplace</h2>
+
+<div *ngFor="let post of postsArray">
+  <div class="panel panel-info">
+    <div class="panel-heading" (click)="goToPostDetails(post)">
+      <h3><em>{{post.title}}</em> by {{post.author}}</h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        {{post.text}}
+      </p>
+    </div>
+  </div>
+</div>
