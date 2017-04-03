@@ -1,19 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Post } from '../post.model';
 
 @Component({
   selector: 'app-edit-post',
   templateUrl: './edit-post.component.html',
   styleUrls: ['./edit-post.component.css']
 })
-export class EditPostComponent implements OnInit {
-  public editTitle: string;
-  public editTopic: string;
-  public editText: string;
-  public editAuthor: string;
 
-  constructor() { }
+export class EditPostComponent {
+  @Input() currentPost: Post;
+  @Output() updateSender = new EventEmitter();
 
-  ngOnInit() {
+  public clickedSaveButton(): void {
+    this.updateSender.emit()
   }
 
 }

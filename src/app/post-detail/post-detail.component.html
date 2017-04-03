@@ -18,7 +18,5 @@
 </div>
 
 <div class="edit-area" *ngIf="isBeingEdited">
-  <app-edit-post></app-edit-post>
-
-
+  <app-edit-post (updateSender)="isBeingEdited = false" [currentPost]="postToDisplay"></app-edit-post>
 </div>
