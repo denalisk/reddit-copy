@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { SplashComponent } from './splash/splash.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { NewPostComponent } from './new-post/new-post.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SplashComponent,
     PostDetailComponent,
-    NewPostComponent
+    NewPostComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,

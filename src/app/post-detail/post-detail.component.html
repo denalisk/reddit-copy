@@ -1,6 +1,24 @@
-<p>
-{{postToDisplay.description}}</p>
-<p>
-{{postToDisplay.topic}}</p>
-<p>
-{{postToDisplay.author}}</p>
+
+<div class="panel panel-success form-group" *ngIf="isBeingEdited === false">
+  <div class="panel-heading">
+    <h2>{{postToDisplay.title}}</h2>
+    <h4>
+      in
+    </h4>
+    <h2>{{postToDisplay.topic}}</h2>
+  </div>
+  <div class="panel-body">
+    <h2>Author: {{postToDisplay.author}}</h2>
+    <p>
+      {{postToDisplay.text}}
+    </p>
+  </div>
+  <!-- "isBeingEdited" here can be called without making a method. Directly sets isBeingEdited to true through use of Angular's powerful *ngIf syntax.  Cool. -->
+  <button type="button" (click)="isBeingEdited = true">Edit</button>
+</div>
+
+<div class="edit-area" *ngIf="isBeingEdited">
+  <app-edit-post></app-edit-post>
+
+
+</div>

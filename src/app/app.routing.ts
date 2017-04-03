@@ -4,7 +4,6 @@ import { SplashComponent } from './splash/splash.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { NewPostComponent } from './new-post/new-post.component';
 
-
 const appRoutes: Routes = [
   {
     path: '',

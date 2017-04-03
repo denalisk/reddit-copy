@@ -1,0 +1,16 @@
+
+<div class="panel panel-success form-group">
+  <div class="panel-heading">
+    <label for="edit-title">Edit Title of Post</label>
+    <input class="form-control" type="text" name="edit-title" id="edit-title" (input)="editTitle = $event.target.value" [value]="editTitle">
+  </div>
+  <div class="panel-body">
+    <label for="edit-topic">Edit Topic</label>
+    <input class="form-control" type="text" name="edit-topic" id="edit-topic" (input)="editTopic = $event.target.value" [value]="editTopic">
+    <label for="edit-text">Edit Text</label>
+    <input class="form-control" type="textarea" rows="5" cols="50" name="edit-text" id="edit-text" (input)="editText = $event.target.value" [value]="editText">
+    <label for="edit-author">Edit You</label>
+    <input class="form-control" type="text" name="edit-author" id="edit-author" (input)="editAuthor = $event.target.value" [value]="editAuthor">
+  </div>
+  <button type="button" (click)="clickedSaveButton()">Publish Post</button>
+</div>
