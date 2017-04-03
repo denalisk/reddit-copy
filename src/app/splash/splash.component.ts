@@ -11,8 +11,10 @@ import { PostService } from '../post.service';
   styleUrls: ['./splash.component.css'],
   providers: [PostService]
 })
+
 export class SplashComponent implements OnInit {
   postsArray: Post[];
+  public filterDirection: string = 'all';
 
   constructor(public postService: PostService, public router: Router) { }
 

@@ -1,6 +1,13 @@
 <h2>Marketplace</h2>
 
-<div *ngFor="let post of postsArray">
+<select class="view-vote" (input)="filterDirection = $event.target.value">
+  <option value="all">All Saiddit</option>
+  <option value="positive">Positively Saiddit</option>
+  <option value="negative">Negatively Saiddit</option>
+</select>
+
+
+<div *ngFor="let post of postsArray | upvoteSorter:filterDirection">
   <div class="panel panel-info">
     <div class="panel-heading">
       <div class="row">
